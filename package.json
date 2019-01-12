@@ -1,0 +1,15 @@
+{
+  "name": "templatebot",
+  "version": "1.0.0",
+  "description": "Discord.js bot template",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "MoonlightCapital",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js#11.4-dev"
+  }
+}

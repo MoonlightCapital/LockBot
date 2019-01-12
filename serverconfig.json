@@ -1,0 +1,18 @@
+{
+  "mod_roles": ["510097634871214080"],
+  "trusted_roles": [],
+
+  "mute_role": "328923757819330581",
+  "log_channel": "452765037958922240",
+  "logged_actions": ["*"],
+
+  "announcement_channel": "314116801975943198",
+
+  "antiraid": {
+    "time": 15,
+    "maxjoins": 3
+  },
+
+  "min_verification_level": 2,
+  "lock_regexban_to_guild_owner": true
+}
