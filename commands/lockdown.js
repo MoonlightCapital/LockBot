@@ -2,8 +2,6 @@ const {Permissions} = require('discord.js')
 
 exports.run = async (client, message, args) => {
 
-  if(!message.member.roles.some(r=>client.serverconfig.mod_roles.includes(r.id))) return
-
   if(!message.guild.me.hasPermission('MANAGE_ROLES'))
     return message.channel.send(':no_entry: I do not have permission to manage roles')
 
@@ -32,5 +30,6 @@ exports.help = {
 exports.config = {
   guildOnly: true,
   ownerOnly: false,
+  modOnly: true,
   aliases: [],
 }

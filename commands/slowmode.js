@@ -5,8 +5,6 @@ exports.run = async (client, message, args) => {
   /*if(!TextChannel.setRateLimitPerUser)
     return message.channel.send(':rotating_light: The running version fo Discord.js does not have support for slowmode')*/
 
-  if(!message.member.roles.some(r=>client.serverconfig.mod_roles.includes(r.id))) return
-
   const timer = parseInt(args.pop())
 
   if(Number.isNaN(timer) || timer < 0 || timer > 120)
@@ -50,11 +48,13 @@ exports.help = {
   name: 'slowmode',
   info: 'Sets slowmode for one or more channels',
   usage: '...<channel> <timer>',
+  category: 'Security',
   unlisted: false,
 }
 
 exports.config = {
   guildOnly: true,
   ownerOnly: false,
+  modOnly: true,
   aliases: [],
 }

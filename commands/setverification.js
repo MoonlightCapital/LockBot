@@ -15,7 +15,6 @@ function getLabel(lv) {
 
 exports.run = async (client, message, args) => {
 
-  if(!message.member.roles.some(r=>client.serverconfig.mod_roles.includes(r.id))) return
 
   if(!message.guild.me.hasPermission('MANAGE_GUILD'))
     return message.channel.send(':no_entry: I\'m missing permissions to manage this server')
@@ -51,5 +50,6 @@ exports.help = {
 exports.config = {
   guildOnly: true,
   ownerOnly: false,
+  modOnly: true,
   aliases: [],
 }

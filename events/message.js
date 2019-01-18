@@ -14,6 +14,8 @@ module.exports = async (client, message) => {
   if(cmd.config.guildOnly && !message.guild) return
   if(cmd.config.ownerOnly && (!client.config.owners.includes(message.author.id) || client.config.owners !== message.author.id)) return
 
+  if(cmd.config.modOnly && !message.member.roles.some(r=>client.serverconfig.mod_roles.includes(r.id))) return
+
   try {
     await cmd.run(client, message, args)
   } catch (error) {

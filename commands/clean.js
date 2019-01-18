@@ -1,9 +1,10 @@
 exports.run = async (client, message, args) => {
 
-  if(!message.member.roles.some(r=>client.serverconfig.mod_roles.includes(r.id))) return
-
   if(!message.channel.permissionsFor(message.guild.me).has('MANAGE_MESSAGES'))
     return message.channel.send(':no_entry: I\'m missing permissions to manage messages in this channel')
+
+  if(client.serverconfig.noCleanChannels.includes(message.channel.id))
+    return message.channel.send(':no_entry: You cannot clean messages here')
 
   const option = args.shift()
   if(!option)
@@ -82,5 +83,6 @@ exports.help = {
 exports.config = {
   guildOnly: true,
   ownerOnly: false,
+  modOnly: true,
   aliases: [],
 }
