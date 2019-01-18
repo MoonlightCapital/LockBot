@@ -83,7 +83,7 @@ exports.help = {
 
 exports.config = {
   guildOnly: true,
-  ownerOnly: true,
-  modOnly: true,
+  ownerOnly: false,
+  modOnly: false,
   aliases: [],
 }
