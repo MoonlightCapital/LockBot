@@ -22,5 +22,10 @@
 
   "min_verification_level": 2,
   "lock_regexban_to_guild_owner": true,
-  "noCleanChannels": []
+  "noCleanChannels": [],
+
+  "selfroles": {
+    "enabled": true,
+    "roles": ["453193017428410376", "454372447639306252"]
+  }
 }
