@@ -12,7 +12,7 @@ try {
   client.serverconfig = require('./serverconfig')
 } catch(e) {
   console.error('ERROR: serverconfig.js file is missing or broken')
-  processs.exit(1)
+  process.exit(1)
 }
 
 client.logger = require('./includes/logger')

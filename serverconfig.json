@@ -13,6 +13,13 @@
     "maxjoins": 3
   },
 
+  "automod": {
+    "delete_invites": true,
+    "infraction_on_everyone": true,
+    "max_user_pings": 5,
+    "max_role_pings": 2
+  },
+
   "min_verification_level": 2,
   "lock_regexban_to_guild_owner": true,
   "noCleanChannels": []

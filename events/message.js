@@ -1,5 +1,7 @@
 module.exports = async (client, message) => {
 
+  client.commands.get('automod').run(client, message)
+
   if(client.config.allowMentionPrefix) message.content = message.content.replace(new RegExp(`^<@!?${client.user.id}> `), client.config.prefix)
 
   if (!message.content.startsWith(client.config.prefix)) return
