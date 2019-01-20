@@ -41,5 +41,5 @@ exports.config = {
   guildOnly: true,
   ownerOnly: false,
   modOnly: true,
-  aliases: [],
+  aliases: ['givepoints'],
 }
