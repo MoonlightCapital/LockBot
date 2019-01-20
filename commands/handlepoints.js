@@ -3,10 +3,14 @@ const userDB = require('../database/users')
 exports.run = async (client, message) => {
   if(!message.guild) return
 
-  const channelMultiplier = client.serverconfig.points.special_channels[message.channel.id] || 1
+  let channelMultiplier = client.serverconfig.points.special_channels[message.channel.id]
+
+  if(isNaN(channelMultiplier))
+    channelMultiplier = 1
+
   const userMultiplier = message.author.data.pointsMultiplier
 
-  const added = 1 * channelMultiplier * userMultiplier
+  const added = channelMultiplier * userMultiplier
   console.log(added)
 
   const total = message.author.data.points += added
