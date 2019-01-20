@@ -21,7 +21,7 @@ client.dversion = Discord.version
 client.utils = require('./utilities')
 
 try {
-  client.serverconfig = require('./serverconfig')
+  client.serverconfig = require(process.env.USE_CONFIG === 'production' ? './serverconfig' : './devserverconfig')
 } catch(e) {
   console.error('ERROR: serverconfig.js file is missing or broken')
   process.exit(1)
