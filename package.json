@@ -10,6 +10,8 @@
   "author": "MoonlightCapital",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "github:discordjs/discord.js#11.4-dev"
+    "discord.js": "github:discordjs/discord.js#11.4-dev",
+    "sqlite": "^3.0.0",
+    "sqlite3": "^4.0.6"
   }
 }
