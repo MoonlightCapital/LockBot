@@ -1,7 +1,7 @@
 const {execSync} = require('child_process')
 
 exports.run = async (client, message) => {
-  execSync('git fetch origin')
+  execSync('git fetch origin && git reset --hard origin/bandana-dee')
 
   message.channel.send(':white_check_mark: Bot updated successfully')
 }
