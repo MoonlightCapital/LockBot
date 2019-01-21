@@ -1,4 +1,4 @@
-if(process.env.USE_CONFIG !== 'dev')
+if(process.env.USE_CONFIG !== 'dev') {
   const http = require('http');
   const express = require('express');
   const app = express();
