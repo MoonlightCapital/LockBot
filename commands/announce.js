@@ -12,11 +12,13 @@ exports.run = async (client, message, args) => {
     return message.channel.send(':no_entry: I\'m unable to send messages in tht channel')
 
   const args2 = args.join(' ').split(' | ')
+  console.log(args2)
 
   if(args2.length < 2)
     return message.channel.send(':warning: Please supply a role and some message content')
 
-  const ment = args.shift().trim()
+  const ment = args2.shift().trim()
+  console.log(ment)
   let mention, role
 
   if(ment === '--everyone')
@@ -37,7 +39,7 @@ exports.run = async (client, message, args) => {
   if(role)
     await role.setMentionable(true, 'Announcement')
 
-  await channel.send(`${mention} ${args2[1]}`)
+  await channel.send(`${mention} ${args2[0]}`)
   if(role)
     await role.setMentionable(false, 'Announcement posted')
 
