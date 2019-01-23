@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
 
   if(message.author.data.pointsMultiplier > 1) {
     embed.addBlankFiend()
-    .addField(`:star2: **Your points will be multiplied by ${message.author.data.pointsMultiplier}** :star2:`)
+    .addField(`:star2: **Your points will be multiplied by ${message.author.data.pointsMultiplier}** :star2:`, ':tada:')
   }
 
   message.channel.send(embed)
