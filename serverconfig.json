@@ -1,13 +1,13 @@
 {
-  "mod_roles": ["359058032526753792", "359058480251928577", "359058032434348034"],
-  "trusted_roles": [],
+  "mod_roles": ["531106247223672834"],
+  "trusted_roles": ["538065493253292042"],
 
-  "mute_role": "359060876642484225",
+  "mute_role": "531106101861679125",
   "verified_role": "359058703196094465",
-  "log_channel": "452779886638006302",
+  "log_channel": "531108787214483506",
   "logged_actions": ["*"],
 
-  "announcement_channel": "359059301538463762",
+  "announcement_channel": "531106784321077249",
 
   "antiraid": {
     "time": 15,
@@ -23,20 +23,10 @@
 
   "min_verification_level": 2,
   "lock_regexban_to_guild_owner": true,
-  "noCleanChannels": [],
+  "noCleanChannels": ["531108787214483506", "531107901964550156"],
 
   "selfroles": {
     "enabled": true,
-    "roles": ["485732307529891863"]
+    "roles": ["538065340161064960"]
   },
-
-  "points": {
-    "special_channels": {
-      "359059587699048450": 2,
-      "484232642309652480": 0,
-      "484793462202302466": 2,
-      "359059419855847425": 3,
-      "518525143576739841": 2
-    }
-  }
 }
