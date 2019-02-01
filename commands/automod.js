@@ -1,5 +1,6 @@
 const invitePattern = /(?:https?:\/\/)?discord(\.gg|app\.com\/invite)\/([A-Za-z0-9-_]+)/gmi
 const everyonePattern = /@(everyone|here)/gmi
+const linkPattern = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})/gmi
 
 exports.run = async (client, message) => {
 
@@ -39,6 +40,15 @@ exports.run = async (client, message) => {
     caught = true
     gravity += 3
     reasons.push('Pinged too many roles in a single message')
+  }
+
+  if(content.match(linkPattern) && !message.member.roles.has(client.serverconfig.verified_role)) {
+    caught = true
+    del = true
+    reasons.push('Sent a link without being verified')
+
+    message.reply('only verified users are allowed to send links. To discover how to verify yourself, read this server\'s rules channel')
+      .then(m=>m.delete(10000))
   }
 
   if(caught) {
